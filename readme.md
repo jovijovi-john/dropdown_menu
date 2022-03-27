@@ -82,5 +82,7 @@ para conseguir utilizar o menu dropdown, é necessário seguir a estrutura:
 </header>
 ```
 Caso deseje customizar, basta alterar o arquivo de estilização dropdown/styles_dropdown.css
+Para ver um exemplo de utilização, veja o site deste repositório: https://jovijovi-john.github.io/dropdown_menu/
+O arquivo html utilizado é o index.html
 
 Qualquer dúvida ou sujestão de melhoria, por favor envie-me no meu email: jvc.goncalves@discente.ufma.br
