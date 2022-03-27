@@ -17,10 +17,10 @@ Dependencias:
 Importação:
 
     Após os arquivos de estilizações do seu projeto, importe o arquivo styles_dropdown:
-    <img alt="importacao" src="github/importacao.png" />
+    <img alt="importacao" src=".github/importacao.png" />
 
     no final da tag body, importe o arquivo toggleDropdown.js:
-    <img alt="importacao" src="github/importacao_js.png" />
+    <img alt="importacao" src=".github/importacao_js.png" />
      
 
 Para pleno funcionamento, é necessário fazer o seguinte reset no seu arquivo de estilos.
