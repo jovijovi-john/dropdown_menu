@@ -1,8 +1,8 @@
 Configuração e instalação:
 
     Basta copiar a pasta dropdown para a raiz do seu projeto, os outros arquivos não são necessários para
-    configuração do dropdown. Caso deseje escolher outro local para colocá-la, altere os paths de importação sugeridos
-    nesta documentação.
+    configuração do dropdown. Caso deseje escolher outro local para colocá-la, altere os paths de importação
+    sugeridos nesta documentação.
 
 Dependencias:
 
