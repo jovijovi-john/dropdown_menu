@@ -20,8 +20,8 @@ Importação:
     <img alt="importacao" src=".github/importacao.png" />
 
     no final da tag body, importe o arquivo toggleDropdown.js:
-    <img alt="importacao" src=".github/importacao_js.png" />
-     
+![importacao](https://user-images.githubusercontent.com/62183004/160299313-1be17b5c-fba6-405e-aa38-437c49fa8db8.png)
+
 
 Para pleno funcionamento, é necessário fazer o seguinte reset no seu arquivo de estilos.
 
