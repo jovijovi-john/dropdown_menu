@@ -9,8 +9,7 @@ Dependencias:
     - FontAwesome
 
     para importar, basta ,no head do seu documento html, colocar a seguinte configuração:
-
-    <script src="https://kit.fontawesome.com/e7da1ddb24.js" crossorigin="anonymous"></script>
+![importacao_js](https://user-images.githubusercontent.com/62183004/160299530-bf92a3f5-b0ef-4e04-86d8-9b721341e674.png)
     qualquer dúvida quanto à lib, acesse a documentação: https://fontawesome.com/
     
 
