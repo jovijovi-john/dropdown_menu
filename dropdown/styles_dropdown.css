@@ -1,0 +1,203 @@
+:root {
+    --header-background-color: #fff; /*cor do background do header*/
+   
+    --link-web-color: #4e4e4e; /*cor do link na versão web*/
+    --link-web-color-hover: #007e83; /*cor do link no evento de hover na versão web*/
+   
+    --link-dropdown-color: #fff; /*cor do link quando o menu dropdown for aberto*/
+    --link-dropdown-hover-color: #fff; /*cor do link no evento hover quando o menu dropdown for aberto*/
+   
+    --icon-menu-color: #007e83; /*cor do icone hamburguer(icon-menu) */
+    --icon-close-color:#fff; /*cor do icone X(icon-close) obs: so aparece quando abrir o dropdown */
+   
+    --background-dropdown-color: #007e83;  /*cor do background do menu dropdown quando for aberto*/
+}
+
+/* ----- Menu -------------------------------------------------------- */
+
+.header-menu {
+    background-color: var(--header-background-color);
+    margin-bottom: 2rem;
+    box-shadow: 0px 0px 12px rgba(37, 37, 37, 0.15);
+    
+    display: flex;
+    width: 100%;
+
+    top: 0;
+    left: 0;
+    position: fixed;
+
+    background-color: var(--body-color);
+}
+
+
+nav.container-menu{ 
+    /* rem == root element  ->   4.5 * 16 == 74;*/
+
+    height: 4.5rem;
+    width: 100%;
+    
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav.container-menu .icon-close {
+    color: var(--icon-close-color);
+}
+
+nav.container-menu .icon-menu {
+    color: var(--icon-menu-color);
+}
+
+/* definindo o cursor do tipo ponteiro nos icones do dropdown-menu */
+nav.container-menu .icon-close, 
+nav.container-menu .icon-menu{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+/* escondendo o icon-close */
+nav.container-menu .icon-close {
+    visibility: hidden;
+    opacity: 0;
+
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    
+    transition: 0.2s;
+}
+
+
+/* por padrão o menu vai vir escondido, so quando clicarmos no icon-menu que ele será mostrado */
+nav.container-menu .menu {
+    opacity: 0;
+    visibility: hidden;
+    top: -20rem;
+    transition: 0.2s;
+}
+
+nav.container-menu .menu ul li{
+    text-align: center;
+}
+
+nav.container-menu .menu ul {
+    display: none;
+    list-style: none;
+    gap: 2rem
+}
+
+
+/* Links */
+nav.container-menu .menu ul .dropdown-link {
+    color: var(--link-web-color);
+
+    text-decoration: none;
+
+    transition: color 0.25s;
+    position: relative;
+}
+
+nav.container-menu .menu ul .dropdown-link:hover{
+    color: var(--link-web-color-hover);
+}
+
+nav.container-menu .menu ul .dropdown-link::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--link-web-color-hover);
+    position: absolute;
+    left: 0;
+    bottom: -1.5rem;
+    transition: width 0.3s;
+}
+
+nav.container-menu .menu ul .dropdown-link:hover::after {
+    width: 100%;
+}
+
+
+/* Links no dropdown */
+
+nav.container-menu.show-menu .menu ul .dropdown-link {
+    color: var(--link-dropdown-color);
+    
+    letter-spacing: 0.75px;
+    font-size: 1.875rem;
+    font-weight: bold;
+}
+
+nav.container-menu.show-menu .menu ul .dropdown-link:hover{
+    color: var(--link-dropdown-hover-color);
+}
+
+nav.container-menu.show-menu .menu ul .dropdown-link::after{
+    background: var(--link-dropdown-hover-color);
+}
+
+
+/* quando a nav estiver com o .show-menu 
+quer dizer que o usuario clicou no icone para abrir o menu,
+logo o botão de fechar deve ser mostrado */
+
+nav.container-menu.show-menu .icon-close {
+    visibility: visible;
+    opacity: 1;
+    top: 1.5rem;
+}
+
+
+/* quando clicar no icon-menu, a classe container-menu será adicionada à nav,
+ então essas configurações serão aplicadas ao menuu */
+
+nav.container-menu.show-menu .menu {
+    opacity: 1;
+    visibility: visible;
+    background: var(--background-dropdown-color); 
+    
+    height: 100vh;
+    width: 100vw;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: grid;
+    place-content: center;
+}
+
+nav.container-menu.show-menu .menu ul {
+    display: grid;
+    gap: 4rem;
+}   
+
+@media (min-width: 992px){
+    
+    nav.container-menu .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+    
+    nav.container-menu .menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+    
+    nav.container-menu .icon-menu {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px){
+    nav.container-menu {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
